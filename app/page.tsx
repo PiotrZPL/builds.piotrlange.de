@@ -78,6 +78,12 @@ export default function Home() {
           <div><p className='text-center font-bold text-xl'>{listOfNames[index]}</p></div>
           <div></div>
         </div>
+        <div className='h-20'></div>
+        <div className='flex place-content-center'>
+          <button className='bg-blue-500 rounded-md'>
+            <p className='p-5 font-bold'>Download {listOfNames[index]}</p>
+          </button>
+        </div>
       </div>
     </main>
   )
