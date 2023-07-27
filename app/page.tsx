@@ -68,7 +68,7 @@ export default function Home() {
               height={200}
               priority
             /> */}
-            <img src={listOfFiles[index]} width={200} height={200} alt={listOfNames[index]}/>
+            <Image src={listOfFiles[index]} width={200} height={200} alt={listOfNames[index]}/>
           </motion.div>
           <div className='flex flex-col justify-center'>
             <button onClick={() => {handleClick(true)}} >
