@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
-import MyHeader from './my_header'
+import MyHeader from './components/my_header'
 import "./theme.css";     
 import "primereact/resources/primereact.min.css";
 import 'primeicons/primeicons.css';
