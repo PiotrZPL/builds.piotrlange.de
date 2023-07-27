@@ -3,16 +3,24 @@ import Image from 'next/image'
 import React from 'react'
 import { motion, useAnimationControls } from "framer-motion"
 
-
-
 export default function Home() {
-  function handleClick() {
+  function handleClick(right: boolean) {
     controls.set("initial")
-    if (index == 2) {
-      setIndex(0)
+    if (right) {
+      if (index == 2) {
+        setIndex(0)
+      }
+      else {
+        setIndex(index + 1)
+      }
     }
     else {
-      setIndex(index + 1)
+      if (index == 0) {
+        setIndex(2)
+      }
+      else {
+        setIndex(index - 1)
+      }
     }
     controls.start("final")
     console.log(index)
@@ -39,8 +47,10 @@ export default function Home() {
         <h2 className='text-center font-bold text-xl'>Select your ROM</h2>
         <div className='h-10'></div>
         <div className='grid grid-cols-3'>
-          <div onClick={handleClick} className='flex flex-col justify-center'>
-            <p className='text-9xl md:font-bold text-center unselectable'>&lt;</p>
+          <div className='flex flex-col justify-center'>
+            <button onClick={() => {handleClick(false)}} >
+              <p className='text-9xl md:font-bold text-center'>&lt;</p>
+            </button>
           </div>
           <motion.div
             variants={variants}
@@ -59,8 +69,10 @@ export default function Home() {
             /> */}
             <img src={listOfFiles[index]} width={200} height={200} alt={listOfNames[index]}/>
           </motion.div>
-          <div onClick={handleClick} className='flex flex-col justify-center'>
-            <p className='text-9xl md:font-bold text-center unselectable'>&gt;</p>
+          <div className='flex flex-col justify-center'>
+            <button onClick={() => {handleClick(true)}} >
+              <p className='text-9xl md:font-bold text-center'>&gt;</p>
+            </button>
           </div>
           <div></div>
           <div><p className='text-center font-bold text-xl'>{listOfNames[index]}</p></div>

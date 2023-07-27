@@ -35,12 +35,3 @@ body {
   background-size: 100%;
   background-color: rgb(31 41 55);
 }
-
-.unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
