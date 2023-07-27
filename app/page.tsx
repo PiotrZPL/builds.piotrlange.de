@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion, useAnimationControls } from "framer-motion"
+import Link from 'next/link'
 
 export default function Home() {
   function handleClick(right: boolean) {
@@ -28,7 +29,7 @@ export default function Home() {
 
   var listOfFiles: string[] = ["/havoc.svg", "/awaken.png", "/superior.png"]
   var listOfNames: string[] = ["Havoc-OS", "AwakenOS", "SuperiorOS"]
-  // var imagePathIndex: number = 0
+  var listOfLinks: string[] = ["/havocos", "awakenos", "/superioros"]
   const [index, setIndex] = React.useState(0);
   const variants = {
     "initial" : {
@@ -81,7 +82,9 @@ export default function Home() {
         <div className='h-20'></div>
         <div className='flex place-content-center'>
           <button className='bg-blue-500 rounded-md'>
-            <p className='p-5 font-bold'>Download {listOfNames[index]}</p>
+            <Link href={listOfLinks[index]}>
+              <p className='p-5 font-bold'>Download {listOfNames[index]}</p>
+            </Link>
           </button>
         </div>
       </div>
