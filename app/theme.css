@@ -3995,7 +3995,7 @@
   box-shadow: 0 0 0 0.2rem #3ddb86;
 }
 .p-accordion .p-accordion-header:not(.p-highlight):not(.p-disabled):hover .p-accordion-header-link {
-  /* background: rgba(255, 255, 255, 0.03); */
+  background: rgba(255, 255, 255, 0.03);
   border-color: #0b213f;
   color: rgba(255, 255, 255, 0.87);
 }
@@ -4008,7 +4008,7 @@
 }
 .p-accordion .p-accordion-header:not(.p-disabled).p-highlight:hover .p-accordion-header-link {
   border-color: #0b213f;
-  /* background: rgba(255, 255, 255, 0.03); */
+  background: rgba(255, 255, 255, 0.03);
   color: rgba(255, 255, 255, 0.87);
 }
 .p-accordion .p-accordion-content {
@@ -6240,6 +6240,10 @@
 
 .android-highlighted {
   color: #3ddb85;
+}
+
+.p-accordion-header-text {
+  width: 100%;
 }
 
 /*# sourceMappingURL=theme.css.map */
