@@ -2,13 +2,13 @@ import React from 'react'
 import { parse } from 'yaml'
 import RomPageContent from './rom_page_content'
 
-async function getRomDevices() {
-    const res = await fetch('https://raw.githubusercontent.com/PiotrZPL/PiotrZPLBuilds/main/AwakenOS/devices.yaml')
+async function getRomDevices(romName: string) {
+    const res = await fetch(`https://raw.githubusercontent.com/PiotrZPL/PiotrZPLBuilds/main/${ romName }/devices.yaml`, { next: { revalidate: 60 } })
     return res.text()
   }
 
 export default async function RomPage( props: any ) {
-    const romDevices = parse((await Promise.all([getRomDevices()]))[0])
+    const romDevices = parse((await Promise.all([getRomDevices(props["romName"])]))[0])
     // console.log(romDevices)
     // const name = parse(romDevices)[0]["name"]
     // const codename = parse(romDevices)[0]["codename"]
