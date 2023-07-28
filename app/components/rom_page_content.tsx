@@ -49,6 +49,7 @@ export default function RomPageContent( props: any ) {
                                                 </div>}>
                                                     <p className='font-bold'>Android {build["android_version"]}</p>
                                                     <div className='flex'><p>Kernel:&nbsp;</p><p className='font-bold'>Linux {build["kernel_version"]}</p></div>
+                                                    {build["sha256"] ? <p className='break-words'>SHA-256 hash: {build["sha256"]}</p> : null}
                                                     <div className='flex flex-col items-center pt-2'>
                                                         <button className='bg-android rounded-md w-fit'>
                                                             <a target="_blank" rel="noopener noreferrer" href={`https://cdn.piotrlange.de/${build["file_name"]}`}>
@@ -76,6 +77,7 @@ export default function RomPageContent( props: any ) {
                                             </div>}>
                                                 <p className='font-bold'>Android {build["android_version"]}</p>
                                                 <div className='flex'><p>Kernel:&nbsp;</p><p className='font-bold'>Linux {build["kernel_version"]}</p></div>
+                                                {build["sha256"] ? <p className='break-words'>SHA-256 hash: {build["sha256"]}</p> : null}
                                                 <div className='flex flex-col items-center pt-2'>
                                                     <button className='bg-sf rounded-md w-fit'>
                                                         <a target="_blank" rel="noopener noreferrer" href={build["sourceforge_link"]}>
