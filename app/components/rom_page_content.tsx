@@ -21,10 +21,13 @@ export default function RomPageContent( props: any ) {
                         <div className='px-4'>
                             <h1 className='font-bold text-4xl'>{props["romName"]}</h1>
                             <div className='h-2 md:h-4'></div>
-                            <h2 className='font-bold text-xl'>Supported on {romDevices.length} device</h2>
-                            <h2 className='font-bold text-xl'>Device name: {name}</h2>
-                            <h2 className='font-bold text-xl'>Extended codename: {extended_codename}</h2>
-                            <h2 className='font-bold text-xl'>Device repository: <a href={device_repository_link}>{device_repository_name}</a></h2>
+                            <h2 className='font-bold text-xl py-1'>Supported on {romDevices.length} device</h2>
+                            <hr className="border-android border"></hr>
+                            <h2 className='font-bold text-xl py-1'>Device name: {name}</h2>
+                            <hr className="border-android border"></hr>
+                            <h2 className='font-bold text-xl py-1'>Extended codename: {extended_codename}</h2>
+                            <hr className="border-android border"></hr>
+                            <h2 className='font-bold text-xl py-1'>Device repository: <a className='android-highlighted' href={device_repository_link}>{device_repository_name}</a></h2>
                         </div>
                         <div className='h-2 md:h-4'></div>
                         <div className='w-full px-4'>
@@ -49,13 +52,13 @@ export default function RomPageContent( props: any ) {
                                                     <div className='flex flex-col items-center'>
                                                         <button className='bg-android rounded-md w-fit'>
                                                             <a target="_blank" rel="noopener noreferrer" href={`https://cdn.piotrlange.de/${build["file_name"]}`}>
-                                                                <p className='p-2 text-2xl font-bold'><i className='jtbIL-arrow-down-to-bracket'></i> Direct download</p>
+                                                                <p className='p-2 text-lg md:text-2xl font-bold'><i className='jtbIL-arrow-down-to-bracket'></i> Direct download</p>
                                                             </a>
                                                         </button>
                                                         <div className='h-2'></div>
                                                         <button className='bg-sf rounded-md w-fit'>
                                                             <a target="_blank" rel="noopener noreferrer" href={build["sourceforge_link"]}>
-                                                                <p className='p-2 text-2xl font-bold'><i className='jtbIB-sourceforge'></i> Download from SourceForge</p>
+                                                                <p className='p-2 text-lg md:text-2xl font-bold'><i className='jtbIB-sourceforge'></i> Download from SourceForge</p>
                                                             </a>
                                                         </button>
                                                     </div>
@@ -76,7 +79,7 @@ export default function RomPageContent( props: any ) {
                                                 <div className='flex flex-col items-center'>
                                                     <button className='bg-sf rounded-md w-fit'>
                                                         <a target="_blank" rel="noopener noreferrer" href={build["sourceforge_link"]}>
-                                                            <p className='p-2 text-2xl font-bold'><i className='jtbIB-sourceforge'></i> Download from SourceForge</p>
+                                                            <p className='p-2 text-lg md:text-2xl font-bold'><i className='jtbIB-sourceforge'></i> Download from SourceForge</p>
                                                         </a>
                                                     </button>
                                                 </div>
