@@ -32,9 +32,10 @@ export default function RomPageContent( props: any ) {
                             <div className='h-1 md:h-2'></div>
                             <div className='overflow-scroll h-96'>
                                 <Accordion className='w-full'>
-                                    {builds.map((build: any) => {
+                                    {builds.map((build: any, index: number) => {
                                         if (build["direct_download"]) {
-                                            return <AccordionTab 
+                                            return (<AccordionTab 
+                                                key={`a${index}`}
                                                 header={<div className='flex justify-between w-full'>
                                                     <div>
                                                         <p>{build["version_name"]}</p>
@@ -58,9 +59,10 @@ export default function RomPageContent( props: any ) {
                                                             </a>
                                                         </button>
                                                     </div>
-                                            </AccordionTab>
+                                            </AccordionTab>)
                                         }
-                                        return <AccordionTab 
+                                        return (<AccordionTab 
+                                            key={`a${index}`}
                                             header={<div className='flex justify-between w-full'>
                                                 <div>
                                                     <p>{build["version_name"]}</p>
@@ -78,7 +80,7 @@ export default function RomPageContent( props: any ) {
                                                         </a>
                                                     </button>
                                                 </div>
-                                        </AccordionTab>
+                                        </AccordionTab>)
                                     })}
                                 </Accordion>
                             </div>
