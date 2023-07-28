@@ -17,7 +17,7 @@ export default function MyHeader() {
                 <div className='flex hidden md:block'>
                     <Link className='px-4 font-bold' href="https://github.com/PiotrZPL">GitHub</Link>
                     <Link className='px-4 font-bold' href="https://sourceforge.net/projects/piotrzplbuilds/">SourceForge</Link>
-                    <Link className='px-4 font-bold' href="https://t.me/PiotrZPL">Telegram</Link>
+                    <Link className='px-4 font-bold' href="https://t.me/piotrzplbuilds">Telegram</Link>
                 </div>
             </div>
             <Sidebar visible={visible} onHide={() => setVisible(false)}>
@@ -25,7 +25,7 @@ export default function MyHeader() {
                 <div className='flex flex-col pt-3'>
                     <Link className='android-highlighted font-bold text-xl' href="https://github.com/PiotrZPL">GitHub</Link>
                     <Link className='android-highlighted font-bold text-xl pt-2' href="https://sourceforge.net/projects/piotrzplbuilds/">SourceForge</Link>
-                    <Link className='android-highlighted font-bold text-xl pt-2' href="https://t.me/PiotrZPL">Telegram</Link>
+                    <Link className='android-highlighted font-bold text-xl pt-2' href="https://t.me/piotrzplbuilds">Telegram</Link>
                 </div>
             </Sidebar>
             
