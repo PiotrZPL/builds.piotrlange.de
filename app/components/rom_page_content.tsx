@@ -27,7 +27,7 @@ export default function RomPageContent( props: any ) {
                             <hr className="border-android border"></hr>
                             <h2 className='font-bold text-xl py-1'>Extended codename: {extended_codename}</h2>
                             <hr className="border-android border"></hr>
-                            <h2 className='font-bold text-xl py-1'>Device repository: <a className='android-highlighted' href={device_repository_link}>{device_repository_name}</a></h2>
+                            <h2 className='font-bold text-xl py-1'>Device repository: <a className='android-highlighted break-words' href={device_repository_link}>{device_repository_name}</a></h2>
                         </div>
                         <div className='h-2 md:h-4'></div>
                         <div className='w-full px-4'>
