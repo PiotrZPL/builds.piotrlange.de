@@ -21,11 +21,11 @@ export default function MyHeader() {
                 </div>
             </div>
             <Sidebar visible={visible} onHide={() => setVisible(false)}>
-                <h2>PiotrZPLBuilds</h2>
-                <div className='flex flex-col'>
-                    <Link className='android-highlighted' href="https://github.com/PiotrZPL">GitHub</Link>
-                    <Link className='android-highlighted' href="https://sourceforge.net/projects/piotrzplbuilds/">SourceForge</Link>
-                    <Link className='android-highlighted' href="https://t.me/PiotrZPL">Telegram</Link>
+                <h2 className='font-extrabold text-2xl'>PiotrZPLBuilds</h2>
+                <div className='flex flex-col pt-3'>
+                    <Link className='android-highlighted font-bold text-xl' href="https://github.com/PiotrZPL">GitHub</Link>
+                    <Link className='android-highlighted font-bold text-xl pt-2' href="https://sourceforge.net/projects/piotrzplbuilds/">SourceForge</Link>
+                    <Link className='android-highlighted font-bold text-xl pt-2' href="https://t.me/PiotrZPL">Telegram</Link>
                 </div>
             </Sidebar>
             
