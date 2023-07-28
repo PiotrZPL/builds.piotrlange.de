@@ -8,6 +8,8 @@ export default function RomPageContent( props: any ) {
     const name = romDevices[0]["name"]
     const extended_codename = romDevices[0]["extended_codename"]
     const builds = romDevices[0]["builds"]
+    const device_repository_name = romDevices[0]["device_repository_name"]
+    const device_repository_link = romDevices[0]["device_repository_link"]
 
     return (
         <main className="flex flex-col items-center justify-between pt-12 md:pt-24">
@@ -22,14 +24,42 @@ export default function RomPageContent( props: any ) {
                             <h2 className='font-bold text-xl'>Supported on {romDevices.length} device</h2>
                             <h2 className='font-bold text-xl'>Device name: {name}</h2>
                             <h2 className='font-bold text-xl'>Extended codename: {extended_codename}</h2>
+                            <h2 className='font-bold text-xl'>Device repository: <a href={device_repository_link}>{device_repository_name}</a></h2>
                         </div>
                         <div className='h-2 md:h-4'></div>
                         <div className='w-full px-4'>
                             <h1 className='font-bold text-2xl'>Builds</h1>
                             <div className='h-1 md:h-2'></div>
-                            <Accordion className='w-full'>
-                                {builds.map((build: any) => {
-                                    if (build["direct_download"]) {
+                            <div className='overflow-scroll h-96'>
+                                <Accordion className='w-full'>
+                                    {builds.map((build: any) => {
+                                        if (build["direct_download"]) {
+                                            return <AccordionTab 
+                                                header={<div className='flex justify-between w-full'>
+                                                    <div>
+                                                        <p>{build["version_name"]}</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>{build["build_date"]}</p>
+                                                    </div>
+                                                </div>}>
+                                                    <p>Android {build["android_version"]}</p>
+                                                    <p>Kernel: Linux {build["kernel_version"]}</p>
+                                                    <div className='flex flex-col items-center'>
+                                                        <button className='bg-android rounded-md w-fit'>
+                                                            <a target="_blank" rel="noopener noreferrer" href={`https://cdn.piotrlange.de/${build["file_name"]}`}>
+                                                                <p className='p-2 text-2xl font-bold'><i className='jtbIL-arrow-down-to-bracket'></i> Direct download</p>
+                                                            </a>
+                                                        </button>
+                                                        <div className='h-2'></div>
+                                                        <button className='bg-sf rounded-md w-fit'>
+                                                            <a target="_blank" rel="noopener noreferrer" href={build["sourceforge_link"]}>
+                                                                <p className='p-2 text-2xl font-bold'><i className='jtbIB-sourceforge'></i> Download from SourceForge</p>
+                                                            </a>
+                                                        </button>
+                                                    </div>
+                                            </AccordionTab>
+                                        }
                                         return <AccordionTab 
                                             header={<div className='flex justify-between w-full'>
                                                 <div>
@@ -42,12 +72,6 @@ export default function RomPageContent( props: any ) {
                                                 <p>Android {build["android_version"]}</p>
                                                 <p>Kernel: Linux {build["kernel_version"]}</p>
                                                 <div className='flex flex-col items-center'>
-                                                    <button className='bg-android rounded-md w-fit'>
-                                                        <a target="_blank" rel="noopener noreferrer" href={`https://cdn.piotrlange.de/${build["file_name"]}`}>
-                                                            <p className='p-2 text-2xl font-bold'><i className='jtbIL-arrow-down-to-bracket'></i> Direct download</p>
-                                                        </a>
-                                                    </button>
-                                                    <div className='h-2'></div>
                                                     <button className='bg-sf rounded-md w-fit'>
                                                         <a target="_blank" rel="noopener noreferrer" href={build["sourceforge_link"]}>
                                                             <p className='p-2 text-2xl font-bold'><i className='jtbIB-sourceforge'></i> Download from SourceForge</p>
@@ -55,28 +79,9 @@ export default function RomPageContent( props: any ) {
                                                     </button>
                                                 </div>
                                         </AccordionTab>
-                                    }
-                                    return <AccordionTab 
-                                        header={<div className='flex justify-between w-full'>
-                                            <div>
-                                                <p>{build["version_name"]}</p>
-                                            </div>
-                                            <div>
-                                                <p>{build["build_date"]}</p>
-                                            </div>
-                                        </div>}>
-                                            <p>Android {build["android_version"]}</p>
-                                            <p>Kernel: Linux {build["kernel_version"]}</p>
-                                            <div className='flex flex-col items-center'>
-                                                <button className='bg-sf rounded-md w-fit'>
-                                                    <a target="_blank" rel="noopener noreferrer" href={build["sourceforge_link"]}>
-                                                        <p className='p-2 text-2xl font-bold'><i className='jtbIB-sourceforge'></i> Download from SourceForge</p>
-                                                    </a>
-                                                </button>
-                                            </div>
-                                    </AccordionTab>
-                                })}
-                            </Accordion>
+                                    })}
+                                </Accordion>
+                            </div>
                         </div>
                     </div>
                 </div>
