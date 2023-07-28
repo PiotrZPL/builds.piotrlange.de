@@ -12,7 +12,7 @@ export default function RomPageContent( props: any ) {
     const device_repository_link = romDevices[0]["device_repository_link"]
 
     return (
-        <main className="flex flex-col items-center justify-between pt-12 md:pt-24">
+        <main className="flex flex-col items-center justify-between pt-12 md:pt-24 pb-24">
             <div className='flex flex-col md:flex-row w-full'>
                 <div className='w-0 md:w-1/6'></div>
                 <div className='md:w-2/6 bg-gray-800 rounded-lg border-2 md:border-4 border-white'>

@@ -25,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MyHeader/>
-        {children}
-        <ZplFooter/>
+        <div className='relative min-h-screen'>
+          <MyHeader/>
+          {children}
+          <ZplFooter/>
+        </div>
       </body>
     </html>
   )

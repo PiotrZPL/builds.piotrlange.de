@@ -1,6 +1,6 @@
 export default function ZplFooter() {
     return (
-        <footer className="md:fixed md:bottom-0 md:left-0 w-screen">
+        <footer className="absolute bottom-0 w-screen">
             <div className="w-full mx-auto">
                 <div className="bg-gray-800 rounded-lg shadow m-4 p-4 md:flex md:items-center md:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">© 2023 <a href="https://piotrlange.de/" className="hover:underline android-highlighted">PiotrZPL</a>. All Rights Reserved.

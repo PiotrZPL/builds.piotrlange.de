@@ -42,7 +42,7 @@ export default function Home() {
   const controls = useAnimationControls()
 
   return (
-    <main className="flex flex-col items-center justify-between pt-24">
+    <main className="flex flex-col items-center justify-between pt-24 pb-24">
       <div>
         <h1 className='text-center font-bold text-3xl'>PiotrZPLBuilds</h1>
         <h2 className='text-center font-bold text-xl'>Select your ROM</h2>
