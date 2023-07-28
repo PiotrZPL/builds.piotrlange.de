@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
 import MyHeader from './components/my_header'
 import "./theme.css";     
+import "./additions.css"
 import "primereact/resources/primereact.min.css";
 import 'primeicons/primeicons.css';
 
