@@ -33,7 +33,7 @@ export default function RomPageContent( props: any ) {
                         <div className='w-full px-4'>
                             <h1 className='font-bold text-2xl'>Builds</h1>
                             <div className='h-1 md:h-2'></div>
-                            <div className='overflow-scroll h-96'>
+                            <div className='overflow-scroll h-fit max-h-96'>
                                 <Accordion className='w-full'>
                                     {builds.map((build: any, index: number) => {
                                         if (build["direct_download"]) {

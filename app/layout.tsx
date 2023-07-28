@@ -8,6 +8,7 @@ import "./jtbIcons_v1.1/jtbIB.css"
 import "./jtbIcons_v1.1/jtbIL.css"
 import "primereact/resources/primereact.min.css";
 import 'primeicons/primeicons.css';
+import ZplFooter from './components/zpl_footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <MyHeader/>
         {children}
+        <ZplFooter/>
       </body>
     </html>
   )
