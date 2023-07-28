@@ -41,7 +41,19 @@ export default function RomPageContent( props: any ) {
                                             </div>}>
                                                 <p>Android {build["android_version"]}</p>
                                                 <p>Kernel: Linux {build["kernel_version"]}</p>
-                                                <p>Direct</p>
+                                                <div className='flex flex-col items-center'>
+                                                    <button className='bg-android rounded-md w-fit'>
+                                                        <a target="_blank" rel="noopener noreferrer" href={`https://cdn.piotrlange.de/${build["file_name"]}`}>
+                                                            <p className='p-2 text-2xl font-bold'><i className='jtbIL-arrow-down-to-bracket'></i> Direct download</p>
+                                                        </a>
+                                                    </button>
+                                                    <div className='h-2'></div>
+                                                    <button className='bg-sf rounded-md w-fit'>
+                                                        <a target="_blank" rel="noopener noreferrer" href={build["sourceforge_link"]}>
+                                                            <p className='p-2 text-2xl font-bold'><i className='jtbIB-sourceforge'></i> Download from SourceForge</p>
+                                                        </a>
+                                                    </button>
+                                                </div>
                                         </AccordionTab>
                                     }
                                     return <AccordionTab 
@@ -55,6 +67,13 @@ export default function RomPageContent( props: any ) {
                                         </div>}>
                                             <p>Android {build["android_version"]}</p>
                                             <p>Kernel: Linux {build["kernel_version"]}</p>
+                                            <div className='flex flex-col items-center'>
+                                                <button className='bg-sf rounded-md w-fit'>
+                                                    <a target="_blank" rel="noopener noreferrer" href={build["sourceforge_link"]}>
+                                                        <p className='p-2 text-2xl font-bold'><i className='jtbIB-sourceforge'></i> Download from SourceForge</p>
+                                                    </a>
+                                                </button>
+                                            </div>
                                     </AccordionTab>
                                 })}
                             </Accordion>

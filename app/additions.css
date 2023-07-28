@@ -2,6 +2,14 @@
     color: #3ddb85;
 }
 
+.bg-android {
+    background-color: #3ddb85;
+}
+
+.bg-sf {
+    background-color: #ff6600;
+}
+
 .p-accordion-header-text {
     width: 100%;
 }

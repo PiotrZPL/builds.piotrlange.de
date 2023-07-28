@@ -4,6 +4,8 @@ import type { Metadata } from 'next'
 import MyHeader from './components/my_header'
 import "./theme.css";     
 import "./additions.css"
+import "./jtbIcons_v1.1/jtbIB.css"
+import "./jtbIcons_v1.1/jtbIL.css"
 import "primereact/resources/primereact.min.css";
 import 'primeicons/primeicons.css';
 
