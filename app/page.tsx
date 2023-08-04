@@ -7,30 +7,35 @@ import Link from 'next/link'
 export default function Home() {
   function handleClick(right: boolean) {
     controls.set("initial")
+    var newIndex: number = 0
     if (right) {
       if (index == 2) {
-        setIndex(0)
+        newIndex = 0
       }
       else {
-        setIndex(index + 1)
+        newIndex = index + 1
       }
     }
     else {
       if (index == 0) {
-        setIndex(2)
+        newIndex = 2
       }
       else {
-        setIndex(index - 1)
+        newIndex = index - 1
       }
     }
+    setIndex(newIndex)
+    var newList = ["hidden", "hidden", "hidden"]
+    newList[newIndex] = "block"
+    setListOfClasses(newList)
     controls.start("final")
-    console.log(index)
+    console.log(newIndex)
   }
 
-  var listOfFiles: string[] = ["/havoc.svg", "/awaken.png", "/superior.png"]
   var listOfNames: string[] = ["Havoc-OS", "AwakenOS", "SuperiorOS"]
   var listOfLinks: string[] = ["/havocos", "awakenos", "/superioros"]
   const [index, setIndex] = React.useState(0);
+  const [listOfClasses, setListOfClasses] = React.useState(["block", "hidden", "hidden"]);
   const variants = {
     "initial" : {
       scale: 0,
@@ -61,14 +66,9 @@ export default function Home() {
               duration: 0.2
             }}
           >
-            {/* <Image
-              src={listOfFiles[index]}
-              alt="Vercel Logo"
-              width={200}
-              height={200}
-              priority
-            /> */}
-            <Image src={listOfFiles[index]} width={200} height={200} alt={listOfNames[index]}/>
+            <Image src="/havoc.svg" className={listOfClasses[0]} width={200} height={200} alt="Havoc-OS"/>
+            <Image src="/awaken.png" className={listOfClasses[1]} width={200} height={200} alt="AwakenOS"/>
+            <Image src="/superior.png" className={listOfClasses[2]} width={200} height={200} alt="SuperiorOS"/>
           </motion.div>
           <div className='flex flex-col justify-center'>
             <button onClick={() => {handleClick(true)}} >
