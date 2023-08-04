@@ -66,9 +66,9 @@ export default function Home() {
               duration: 0.2
             }}
           >
-            <Image src="/havoc.svg" className={listOfClasses[0]} width={200} height={200} alt="Havoc-OS"/>
-            <Image src="/awaken.png" className={listOfClasses[1]} width={200} height={200} alt="AwakenOS"/>
-            <Image src="/superior.png" className={listOfClasses[2]} width={200} height={200} alt="SuperiorOS"/>
+            <Image priority src="/havoc.svg" className={listOfClasses[0]} width={200} height={200} alt="Havoc-OS"/>
+            <Image priority src="/awaken.png" className={listOfClasses[1]} width={200} height={200} alt="AwakenOS"/>
+            <Image priority src="/superior.png" className={listOfClasses[2]} width={200} height={200} alt="SuperiorOS"/>
           </motion.div>
           <div className='flex flex-col justify-center'>
             <button onClick={() => {handleClick(true)}} >
