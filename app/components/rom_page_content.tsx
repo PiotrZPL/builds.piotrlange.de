@@ -12,26 +12,26 @@ export default function RomPageContent( props: any ) {
     const device_repository_link = romDevices[0]["device_repository_link"]
 
     return (
-        <main className="flex flex-col items-center justify-between pt-12 md:pt-24 pb-24">
+        <main className="flex flex-col items-center justify-between pt-6 md:pt-24 pb-24">
             <div className='flex flex-col md:flex-row w-full'>
                 <div className='w-0 md:w-1/6'></div>
                 <div className='md:w-2/6 bg-gray-800 rounded-lg border-2 md:border-4 border-white'>
                     <div className='flex flex-col'>
                         {/* <div className='w-1/12 md:w-0'></div> */}
                         <div className='px-4 pt-2'>
-                            <h1 className='font-bold text-4xl'>{props["romName"]}</h1>
+                            <h1 className='font-bold text-2xl md:text-4xl'>{props["romName"]}</h1>
                             <div className='h-2 md:h-4'></div>
-                            <h2 className='font-bold text-xl py-1'>Supported on {romDevices.length} device</h2>
+                            <h2 className='font-bold text-lg md:text-xl py-1'>Supported on {romDevices.length} device</h2>
                             <hr className="border-android border"></hr>
-                            <h2 className='font-bold text-xl py-1'>Device name: {name}</h2>
+                            <h2 className='font-bold text-lg md:text-xl py-1'>Device name: {name}</h2>
                             <hr className="border-android border"></hr>
-                            <h2 className='font-bold text-xl py-1'>Extended codename: {extended_codename}</h2>
+                            <h2 className='font-bold text-lg md:text-xl py-1'>Extended codename: {extended_codename}</h2>
                             <hr className="border-android border"></hr>
-                            <h2 className='font-bold text-xl py-1'>Device repository: <a className='android-highlighted break-words' href={device_repository_link}>{device_repository_name}</a></h2>
+                            <h2 className='font-bold text-lg md:text-xl py-1'>Device repository: <a className='android-highlighted break-words' href={device_repository_link}>{device_repository_name}</a></h2>
                         </div>
                         <div className='h-2 md:h-4'></div>
                         <div className='w-full px-4'>
-                            <h1 className='font-bold text-2xl'>Builds</h1>
+                            <h1 className='font-bold text-xl md:text-2xl'>Builds</h1>
                             <div className='h-1 md:h-2'></div>
                             <div className='overflow-scroll h-fit max-h-96'>
                                 <Accordion className='w-full'>
